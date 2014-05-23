@@ -18,3 +18,23 @@ C:\Users\sdejongh\Documents\Visual Studio 2010\Projects\CamCapture\ColorTrack\ob
 C:\Users\sdejongh\Documents\Visual Studio 2010\Projects\CamCapture\ColorTrack\obj\Debug\ColorTrack.csproj.GenerateResource.Cache
 C:\Users\sdejongh\Documents\Visual Studio 2010\Projects\CamCapture\ColorTrack\obj\Debug\ColorTrack.exe
 C:\Users\sdejongh\Documents\Visual Studio 2010\Projects\CamCapture\ColorTrack\obj\Debug\ColorTrack.pdb
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\obj\Debug\ColorTrack.ColorTrack.resources
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\obj\Debug\ColorTrack.Properties.Resources.resources
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\obj\Debug\ColorTrack.csproj.GenerateResource.Cache
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\bin\Debug\ColorTrack.exe
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\bin\Debug\ColorTrack.pdb
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\bin\Debug\Emgu.CV.dll
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\bin\Debug\Emgu.CV.UI.dll
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\bin\Debug\Emgu.Util.dll
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\bin\Debug\ZedGraph.dll
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\bin\Debug\Emgu.CV.pdb
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\bin\Debug\Emgu.CV.xml
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\bin\Debug\Emgu.CV.UI.pdb
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\bin\Debug\Emgu.CV.UI.xml
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\bin\Debug\Emgu.Util.pdb
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\bin\Debug\Emgu.Util.xml
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\bin\Debug\ZedGraph.xml
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\bin\Debug\zh-CN\Emgu.CV.UI.resources.dll
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\bin\Debug\zh-CN\ZedGraph.resources.dll
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\obj\Debug\ColorTrack.exe
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\obj\Debug\ColorTrack.pdb

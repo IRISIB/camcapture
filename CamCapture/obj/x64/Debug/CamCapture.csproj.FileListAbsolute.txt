@@ -19,3 +19,24 @@ C:\Users\sdejongh\documents\visual studio 2010\Projects\CamCapture\CamCapture\ob
 C:\Users\sdejongh\Documents\Visual Studio 2010\Projects\CamCapture\CamCapture\obj\x64\Debug\CamCapture.csprojResolveAssemblyReference.cache
 C:\Users\sdejongh\Documents\Visual Studio 2010\Projects\CamCapture\CamCapture\obj\x64\Debug\Camcaputure.CamCapture.resources
 C:\Users\sdejongh\Documents\Visual Studio 2010\Projects\CamCapture\CamCapture\obj\x64\Debug\Camcaputure.Properties.Resources.resources
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\CamCapture\bin\x64\Debug\CamCapture.exe
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\CamCapture\bin\x64\Debug\CamCapture.pdb
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\CamCapture\bin\x64\Debug\Emgu.CV.dll
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\CamCapture\bin\x64\Debug\Emgu.CV.UI.dll
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\CamCapture\bin\x64\Debug\Emgu.Util.dll
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\CamCapture\bin\x64\Debug\ZedGraph.dll
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\CamCapture\bin\x64\Debug\Emgu.CV.pdb
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\CamCapture\bin\x64\Debug\Emgu.CV.xml
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\CamCapture\bin\x64\Debug\Emgu.CV.UI.pdb
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\CamCapture\bin\x64\Debug\Emgu.CV.UI.xml
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\CamCapture\bin\x64\Debug\Emgu.Util.pdb
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\CamCapture\bin\x64\Debug\Emgu.Util.xml
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\CamCapture\bin\x64\Debug\ZedGraph.xml
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\CamCapture\bin\x64\Debug\zh-CN\Emgu.CV.UI.resources.dll
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\CamCapture\bin\x64\Debug\zh-CN\ZedGraph.resources.dll
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\CamCapture\obj\x64\Debug\CamCapture.csprojResolveAssemblyReference.cache
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\CamCapture\obj\x64\Debug\Camcaputure.CamCapture.resources
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\CamCapture\obj\x64\Debug\Camcaputure.Properties.Resources.resources
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\CamCapture\obj\x64\Debug\CamCapture.csproj.GenerateResource.Cache
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\CamCapture\obj\x64\Debug\CamCapture.exe
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\CamCapture\obj\x64\Debug\CamCapture.pdb

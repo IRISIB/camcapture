@@ -19,57 +19,37 @@ namespace ColorTrack
 
         private Capture _capture = null;
         private bool _running;
-        private Gray picked;
+        private Bgr picked;
         bool bPicked = false;
         private Image<Bgr, Byte> originalImage;
-        private Image<Gray, Byte> intensityImage;
-        private Image<Gray, Byte> maskImage;
+        private Image<Bgr, Byte> maskImage;
 
         public ColorTrack()
         {
             InitializeComponent();
             try
             {
-                _capture = new Capture(1);
+                _capture = new Capture(-1);
                 _capture.ImageGrabbed += ProcessFrame;
             }
             catch (NullReferenceException excpt)
             {
                 MessageBox.Show(excpt.Message);
             }
-            intensityImage = _capture.RetrieveGrayFrame();
+            maskImage = _capture.RetrieveBgrFrame();
         }
 
         private void ProcessFrame(Object sender, EventArgs args)
         {
             originalImage = _capture.RetrieveBgrFrame();
-            Image<Hsv, Byte> hsvframe = originalImage.Convert<Hsv, Byte>();
-            Image<Gray, Byte>[] channels = hsvframe.Split();
-            intensityImage = channels[2];
-            maskImage = intensityImage.Clone();
-            if (bPicked)
-            {
-                /*Image<Gray, Byte> tmpImage = maskImage.SmoothGaussian(5);
-                pickedValue.Text = picked.Intensity.ToString();
-                CircleF[] circles = tmpImage.HoughCircles(
-                    new Gray(picked.Intensity),
-                    new Gray(50),
-                    2,
-                    25,
-                    20, 50)[0]
-
-                foreach (CircleF cir in circles)
-                {
-                    originalImage.Draw(cir, new Bgr(Color.Red), 2);
-                }*/
-
-                threshold(60,80,originalImage);
-
-            }
             
 
-
-
+            if (bPicked)
+            {
+                maskImage = Distance(originalImage, 35);
+                
+            }
+           
 
             captureImage.Image = originalImage;
             treatedImage.Image = maskImage;
@@ -100,8 +80,9 @@ namespace ColorTrack
 
         private void captureImage_MouseClick(object sender, MouseEventArgs e)
         {
-            picked = intensityImage[e.Y, e.X];
-            pickedValue.Text = picked.Intensity.ToString();
+            picked = originalImage[e.Y, e.X];
+            maskImage = originalImage.Clone();
+            pickedValue.Text = picked.Blue.ToString() + "|" + picked.Green.ToString() + "|" + picked.Red.ToString();
             bPicked = true;
 
         }
@@ -114,6 +95,28 @@ namespace ColorTrack
                     if (channelRed[i, j].Intensity < min || channelRed[i, j].Intensity > max)
                         img[i, j] = new Bgr(0, 0, 0);
          }
+        
+        private Image<Bgr,Byte> Distance(Image<Bgr, Byte> img, double thresh)
+        {
+            Image<Bgr, Byte> resultImage = img.Clone();
+            resultImage = resultImage.Resize(0.5, Emgu.CV.CvEnum.INTER.CV_INTER_LINEAR); // Scales 50% to reduce processing time
+            resultImage._Erode(2);
+            resultImage._Dilate(2);
+
+
+            for ( int i=0; i<resultImage.Height; i++ )
+                for (int j = 0; j < resultImage.Width; j++)
+                {
+                    Bgr point = resultImage[i,j];
+                    double distB = Math.Abs(picked.Blue - point.Blue);
+                    double distG = Math.Abs(picked.Green - point.Green);
+                    double distR = Math.Abs(picked.Red - point.Red);
+                    double dist = Math.Sqrt(Math.Pow(Math.Sqrt(Math.Pow(distB,2) + Math.Pow(distG,2)),2) + Math.Pow(distR,2));
+                    if (dist > thresh) resultImage[i, j] = new Bgr(0, 0, 0);
+
+                }
+            return resultImage;
+        }
 
 
     }
