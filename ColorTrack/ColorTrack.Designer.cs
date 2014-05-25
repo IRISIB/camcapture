@@ -40,12 +40,16 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.label3 = new System.Windows.Forms.Label();
             this.pickedValue = new System.Windows.Forms.Label();
+            this.distanceMethod = new System.Windows.Forms.RadioButton();
+            this.geometryMethod = new System.Windows.Forms.RadioButton();
+            this.toleranceValue = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.captureImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.treatedImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.toleranceValue)).BeginInit();
             this.SuspendLayout();
             // 
             // captureImage
@@ -90,7 +94,7 @@
             this.dimensions.AutoSize = true;
             this.dimensions.Location = new System.Drawing.Point(275, 522);
             this.dimensions.Name = "dimensions";
-            this.dimensions.Size = new System.Drawing.Size(19, 26);
+            this.dimensions.Size = new System.Drawing.Size(10, 13);
             this.dimensions.TabIndex = 4;
             this.dimensions.Text = "-";
             this.dimensions.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -100,7 +104,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(648, 501);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 26);
+            this.label1.Size = new System.Drawing.Size(17, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "X:";
             // 
@@ -109,7 +113,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(648, 527);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 26);
+            this.label2.Size = new System.Drawing.Size(17, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Y:";
             // 
@@ -118,7 +122,7 @@
             this.xpos.AutoSize = true;
             this.xpos.Location = new System.Drawing.Point(687, 501);
             this.xpos.Name = "xpos";
-            this.xpos.Size = new System.Drawing.Size(19, 26);
+            this.xpos.Size = new System.Drawing.Size(10, 13);
             this.xpos.TabIndex = 7;
             this.xpos.Text = "-";
             this.xpos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -128,7 +132,7 @@
             this.ypos.AutoSize = true;
             this.ypos.Location = new System.Drawing.Point(687, 527);
             this.ypos.Name = "ypos";
-            this.ypos.Size = new System.Drawing.Size(19, 26);
+            this.ypos.Size = new System.Drawing.Size(10, 13);
             this.ypos.TabIndex = 8;
             this.ypos.Text = "-";
             this.ypos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -155,7 +159,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(983, 527);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 26);
+            this.label3.Size = new System.Drawing.Size(37, 13);
             this.label3.TabIndex = 10;
             this.label3.Text = "Value:";
             // 
@@ -164,9 +168,44 @@
             this.pickedValue.AutoSize = true;
             this.pickedValue.Location = new System.Drawing.Point(1063, 528);
             this.pickedValue.Name = "pickedValue";
-            this.pickedValue.Size = new System.Drawing.Size(19, 26);
+            this.pickedValue.Size = new System.Drawing.Size(10, 13);
             this.pickedValue.TabIndex = 11;
             this.pickedValue.Text = "-";
+            // 
+            // distanceMethod
+            // 
+            this.distanceMethod.AutoSize = true;
+            this.distanceMethod.Checked = true;
+            this.distanceMethod.Location = new System.Drawing.Point(278, 553);
+            this.distanceMethod.Name = "distanceMethod";
+            this.distanceMethod.Size = new System.Drawing.Size(112, 17);
+            this.distanceMethod.TabIndex = 12;
+            this.distanceMethod.TabStop = true;
+            this.distanceMethod.Text = "Distance Tracking";
+            this.distanceMethod.UseVisualStyleBackColor = true;
+            // 
+            // geometryMethod
+            // 
+            this.geometryMethod.AutoSize = true;
+            this.geometryMethod.Location = new System.Drawing.Point(396, 553);
+            this.geometryMethod.Name = "geometryMethod";
+            this.geometryMethod.Size = new System.Drawing.Size(100, 17);
+            this.geometryMethod.TabIndex = 13;
+            this.geometryMethod.Text = "Inrange Method";
+            this.geometryMethod.UseVisualStyleBackColor = true;
+            // 
+            // toleranceValue
+            // 
+            this.toleranceValue.Location = new System.Drawing.Point(502, 553);
+            this.toleranceValue.Maximum = new decimal(new int[] {
+            255,
+            0,
+            0,
+            0});
+            this.toleranceValue.Name = "toleranceValue";
+            this.toleranceValue.Size = new System.Drawing.Size(62, 20);
+            this.toleranceValue.TabIndex = 14;
+            this.toleranceValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // ColorTrack
             // 
@@ -174,6 +213,9 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1374, 617);
+            this.Controls.Add(this.toleranceValue);
+            this.Controls.Add(this.geometryMethod);
+            this.Controls.Add(this.distanceMethod);
             this.Controls.Add(this.pickedValue);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.splitContainer1);
@@ -192,6 +234,7 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.toleranceValue)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,6 +253,9 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label pickedValue;
+        private System.Windows.Forms.RadioButton distanceMethod;
+        private System.Windows.Forms.RadioButton geometryMethod;
+        private System.Windows.Forms.NumericUpDown toleranceValue;
     }
 }
 

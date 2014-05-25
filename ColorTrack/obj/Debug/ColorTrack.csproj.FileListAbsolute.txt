@@ -38,3 +38,4 @@ D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTr
 D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\bin\Debug\zh-CN\ZedGraph.resources.dll
 D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\obj\Debug\ColorTrack.exe
 D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\obj\Debug\ColorTrack.pdb
+D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\ColorTrack\obj\Debug\ColorTrack.csprojResolveAssemblyReference.cache
