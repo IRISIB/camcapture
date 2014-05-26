@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CamCapture", "CamCapture\Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorTrack", "ColorTrack\ColorTrack.csproj", "{EB9942EB-3DB3-426E-BCBD-55B6429A216B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlobTracking", "BlobTracking\BlobTracking.csproj", "{8F54389F-0632-473A-BF25-E6003157A00B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,7 +20,6 @@ Global
 		{A5960DC1-F6FF-46EF-8301-48611AB7FACF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A5960DC1-F6FF-46EF-8301-48611AB7FACF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5960DC1-F6FF-46EF-8301-48611AB7FACF}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{A5960DC1-F6FF-46EF-8301-48611AB7FACF}.Debug|x64.Build.0 = Debug|Any CPU
 		{A5960DC1-F6FF-46EF-8301-48611AB7FACF}.Debug|x86.ActiveCfg = Debug|x86
 		{A5960DC1-F6FF-46EF-8301-48611AB7FACF}.Debug|x86.Build.0 = Debug|x86
 		{A5960DC1-F6FF-46EF-8301-48611AB7FACF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -32,10 +33,22 @@ Global
 		{EB9942EB-3DB3-426E-BCBD-55B6429A216B}.Debug|x64.ActiveCfg = Debug|Any CPU
 		{EB9942EB-3DB3-426E-BCBD-55B6429A216B}.Debug|x86.ActiveCfg = Debug|x86
 		{EB9942EB-3DB3-426E-BCBD-55B6429A216B}.Debug|x86.Build.0 = Debug|x86
-		{EB9942EB-3DB3-426E-BCBD-55B6429A216B}.Release|Any CPU.ActiveCfg = Release|x86
+		{EB9942EB-3DB3-426E-BCBD-55B6429A216B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB9942EB-3DB3-426E-BCBD-55B6429A216B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EB9942EB-3DB3-426E-BCBD-55B6429A216B}.Release|x64.ActiveCfg = Release|x86
 		{EB9942EB-3DB3-426E-BCBD-55B6429A216B}.Release|x86.ActiveCfg = Release|x86
 		{EB9942EB-3DB3-426E-BCBD-55B6429A216B}.Release|x86.Build.0 = Release|x86
+		{8F54389F-0632-473A-BF25-E6003157A00B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F54389F-0632-473A-BF25-E6003157A00B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F54389F-0632-473A-BF25-E6003157A00B}.Debug|x64.ActiveCfg = Debug|x86
+		{8F54389F-0632-473A-BF25-E6003157A00B}.Debug|x64.Build.0 = Debug|x86
+		{8F54389F-0632-473A-BF25-E6003157A00B}.Debug|x86.ActiveCfg = Debug|x86
+		{8F54389F-0632-473A-BF25-E6003157A00B}.Debug|x86.Build.0 = Debug|x86
+		{8F54389F-0632-473A-BF25-E6003157A00B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F54389F-0632-473A-BF25-E6003157A00B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F54389F-0632-473A-BF25-E6003157A00B}.Release|x64.ActiveCfg = Release|x86
+		{8F54389F-0632-473A-BF25-E6003157A00B}.Release|x86.ActiveCfg = Release|x86
+		{8F54389F-0632-473A-BF25-E6003157A00B}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
