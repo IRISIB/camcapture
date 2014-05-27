@@ -18,3 +18,24 @@ D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTra
 D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\obj\Debug\BlobTracking.csproj.GenerateResource.Cache
 D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\obj\Debug\BlobTracking.exe
 D:\Users\Steve De Jongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\obj\Debug\BlobTracking.pdb
+E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\bin\Debug\BlobTracking.exe
+E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\bin\Debug\BlobTracking.pdb
+E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\bin\Debug\Emgu.CV.dll
+E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\bin\Debug\Emgu.CV.UI.dll
+E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\bin\Debug\Emgu.Util.dll
+E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\bin\Debug\ZedGraph.dll
+E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\bin\Debug\Emgu.CV.pdb
+E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\bin\Debug\Emgu.CV.xml
+E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\bin\Debug\Emgu.CV.UI.pdb
+E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\bin\Debug\Emgu.CV.UI.xml
+E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\bin\Debug\Emgu.Util.pdb
+E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\bin\Debug\Emgu.Util.xml
+E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\bin\Debug\ZedGraph.xml
+E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\bin\Debug\zh-CN\Emgu.CV.UI.resources.dll
+E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\bin\Debug\zh-CN\ZedGraph.resources.dll
+E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\obj\Debug\BlobTracking.csprojResolveAssemblyReference.cache
+E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\obj\Debug\BlobTracking.BlobTracking.resources
+E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\obj\Debug\BlobTracking.Properties.Resources.resources
+E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\obj\Debug\BlobTracking.csproj.GenerateResource.Cache
+E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\obj\Debug\BlobTracking.exe
+E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\BlobTracking\obj\Debug\BlobTracking.pdb

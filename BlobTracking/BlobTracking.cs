@@ -22,10 +22,15 @@ namespace BlobTracking
         private bool _captureRunning = false;               // Used to sets captureButton text
         private Capture _capture = null;                    // Capture object
         private Image<Bgr, Byte> _originalImage = null;     // Image directly grabed from camera
+        private double binaryThresholdValue = 250;          
 
         public BlobTracking()
         {
             InitializeComponent();
+
+            // Initialize ThresholdValue box
+            thresholdValue.Value = (decimal)binaryThresholdValue;
+
             try
             {
                 _capture = new Capture(0);                 // Initialize camera capture
@@ -42,7 +47,7 @@ namespace BlobTracking
         {
             _originalImage = _capture.RetrieveBgrFrame();
             Image<Gray, Byte> _detectImage = _originalImage.Convert<Gray, Byte>();                  // Converts image to GrayScale
-            _detectImage = _detectImage.ThresholdBinary(new Gray(250), new Gray(255));              // Binary Threshold to keep only high values (near white)
+            _detectImage = _detectImage.ThresholdBinary(new Gray(binaryThresholdValue), new Gray(255));              // Binary Threshold to keep only high values (near white)
             _detectImage = _detectImage.Canny(new Gray(255).Intensity, new Gray(255).Intensity);    // Border tracing
             _detectImage = _detectImage.Dilate(2).Erode(2);                                         // Smooth for cleaner contours detection
 
@@ -60,7 +65,7 @@ namespace BlobTracking
                     PointF baryCenter = new PointF(rect.X + rect.Width / 2, rect.Y + rect.Height / 2);
                     Cross2DF cross = new Cross2DF(baryCenter,5,5);
                     _originalImage.Draw(cross, bgrRed, 1);
-                    _originalImage.Draw(rect, bgrRed, 2);
+                    _originalImage.Draw(contours, bgrRed, 1);
                 }
 
                 contours = contours.HNext;
@@ -87,14 +92,10 @@ namespace BlobTracking
             _captureRunning = !_captureRunning;
         }
 
-
-
-
-
-
-
-
-
+        private void thresholdValue_ValueChanged(object sender, EventArgs e)
+        {
+            binaryThresholdValue = (double)thresholdValue.Value;
+        }
   
     }
 }
