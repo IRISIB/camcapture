@@ -18,3 +18,4 @@ E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\ShapeTracking
 E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\ShapeTracking\obj\Debug\ShapeTracking.csproj.GenerateResource.Cache
 E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\ShapeTracking\obj\Debug\ShapeTracking.exe
 E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\ShapeTracking\obj\Debug\ShapeTracking.pdb
+E:\Users\sdejongh\Documents\Visual Studio 2010\Projects\camcapture\ShapeTracking\obj\Debug\ShapeTracking.csprojResolveAssemblyReference.cache

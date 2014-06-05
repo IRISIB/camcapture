@@ -18,12 +18,12 @@ namespace ShapeTracking
 {
     public partial class ShapeTracking : Form
     {
-
         private bool _captureRunning = false;               // Used to sets captureButton text
         private Capture _capture = null;                    // Capture object
         private Image<Bgr, Byte> _originalImage = null;     // Image directly grabed from camera
         private Image<Gray, Byte> _detectionImage = null;
-        private Contour<Point> contours;
+        private List<Triangle2DF> triangles;
+        private List<LineSegment2DF> bases;
 
         public ShapeTracking()
         {
@@ -47,27 +47,60 @@ namespace ShapeTracking
             _detectionImage = _originalImage.Convert<Gray, Byte>();
 
             PrepareImage();
-            DrawShapes(_originalImage, FindShapes(_detectionImage));
 
+            // Find triangles
+            triangles = FindShapes(_detectionImage);
 
+            // Find each triangle base
+            bases = FindBases(triangles);
+            
+            // Draw informations
+            DrawShapes(_originalImage, triangles, bases);
+            
             // Display
             captureBox.Image = _originalImage;
             detectBox.Image = _detectionImage;
+   
+        }
 
-           
+        private List<LineSegment2DF> FindBases(List<Triangle2DF> triangles)
+        {
+            // Gather triangles bases
+            List<LineSegment2DF> bases = new List<LineSegment2DF>();
+
+            // For each triangle find the base segment (has the lowest Y values)
+            foreach (Triangle2DF triangle in triangles)
+            {
+                // Get all vertices
+                List<PointF> vertices = new List<PointF>(triangle.GetVertices().AsEnumerable());
+                // Order vertices by Y value (ascending) (0,0) is upper left corner
+                vertices = vertices.OrderBy(vertex => vertex.Y).ToList();
+                // remove the point with the lowest Y value
+                vertices.RemoveAt(0);
+                // Re-order based on X axis to prevent base point switching
+                vertices = vertices.OrderByDescending(vertex => vertex.X).ToList();
+                // Define the base segment
+                LineSegment2DF b = new LineSegment2DF(vertices[0],vertices[1]);
+                bases.Add(b);
+            }
+            return bases;
         }
 
         private List<Triangle2DF> FindShapes(Image<Gray, Byte> img)
         {
+            // Gather triangles
             List<Triangle2DF> triangleList = new List<Triangle2DF>();
             MemStorage stor = new MemStorage();
-            //Contour<Point> allcontours = img.FindContours(CHAIN_APPROX_METHOD.CV_CHAIN_APPROX_SIMPLE, RETR_TYPE.CV_RETR_TREE, stor);
+
+            // Cycle through all contours found
             for (Contour<Point> contours = img.FindContours(CHAIN_APPROX_METHOD.CV_CHAIN_APPROX_SIMPLE, RETR_TYPE.CV_RETR_TREE, stor); contours != null; contours = contours.HNext)
             {
                 Contour<Point> currentContour = contours.ApproxPoly(contours.Perimeter * 0.05, stor);
 
+                // Area value based selection
                 if (currentContour.Area > 400 && currentContour.Area < 4000 )
                 {
+                    // if contour has 3 vertices, it's a triangle
                     if (currentContour.Total == 3) //The contour has 3 vertices, it is a triangle
                     {
                         Point[] pts = currentContour.ToArray();
@@ -78,13 +111,20 @@ namespace ShapeTracking
             return triangleList;
         }
 
-        private void DrawShapes(Image<Bgr, Byte> img, List<Triangle2DF> triangles)
+        private void DrawShapes(Image<Bgr, Byte> img, List<Triangle2DF> triangles, List<LineSegment2DF> bases)
         {
-            foreach (Triangle2DF triangle in triangles)
+            foreach (LineSegment2DF b in bases)
             {
-                img.Draw(triangle, new Bgr(Color.Red), 2);
-                MCvFont f = new MCvFont(Emgu.CV.CvEnum.FONT.CV_FONT_HERSHEY_PLAIN, 0.8, 0.8);
-                img.Draw(triangle.Area.ToString(), ref f, new Point((int)triangle.Centeroid.X,(int)triangle.Centeroid.Y), new Bgr(255, 255, 0));
+                // Draw base segment
+                img.Draw(b, new Bgr(Color.Red), 2);
+                // Draw cross at base point
+                Cross2DF basePoint = new Cross2DF(b.P1,10,10);
+                img.Draw(basePoint, new Bgr(Color.DarkMagenta), 2);
+                // Add text indicating (X,Y) Angle
+                MCvFont f = new MCvFont(Emgu.CV.CvEnum.FONT.CV_FONT_HERSHEY_PLAIN, 1.0, 1.0);
+                double angle = Math.Round(Math.Atan(b.Direction.Y / b.Direction.X)*360/(Math.PI*2),2);
+                string baseText = "(" + b.P1.X.ToString() + "," + b.P1.Y.ToString() + ")" + " " + angle.ToString();
+                img.Draw(baseText, ref f, new Point((int)b.P1.X, (int)b.P1.Y), new Bgr(255,255, 255));
             }
         }
 
